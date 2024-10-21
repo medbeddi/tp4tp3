@@ -1,0 +1,83 @@
+/* Taille de la police par défaut */
+html {
+    font-size: 15px; /* Plus grand par défaut pour améliorer la lisibilité */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 18px; /* Augmente sur les écrans moyens et grands */
+    }
+}
+
+/* Mise au point des boutons et des éléments de formulaire */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem #ffffff, 0 0 0 0.3rem #0056b3; /* Effet bleu plus prononcé */
+}
+
+/* Configuration pour les tailles et marges */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 70px; /* Plus d'espace en bas */
+    font-family: Arial, sans-serif; /* Changer la police */
+    background-color: #f4f4f9; /* Fond global de la page */
+}
+
+/* Style de la navbar */
+.navbar {
+    background-color: #005f73; /* Changement de couleur de fond de la navbar */
+    border-bottom: 2px solid #0a9396; /* Ajouter une bordure en bas */
+}
+
+    .navbar .nav-link {
+        color: #ffffff !important; /* Les liens seront blancs */
+    }
+
+        .navbar .nav-link:hover {
+            color: #94d2bd !important; /* Changement de couleur au survol */
+        }
+
+/* Style du footer */
+.footer {
+    background-color: #005f73; /* Fond du footer */
+    color: #ffffff; /* Texte blanc dans le footer */
+    padding: 20px 0; /* Plus d'espace vertical dans le footer */
+    text-align: center;
+    border-top: 2px solid #0a9396; /* Bordure supérieure */
+}
+
+/* Style de fond pour le contenu */
+.container {
+    background-color: #e0fbfc; /* Fond de la zone principale de contenu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour le contenu */
+}
+
+/* Personnalisation des boutons */
+.btn-primary {
+    background-color: #0a9396;
+    border-color: #0a9396;
+}
+
+    .btn-primary:hover {
+        background-color: #94d2bd;
+        border-color: #94d2bd;
+    }
+
+.btn-secondary {
+    background-color: #005f73;
+    border-color: #005f73;
+}
+
+    .btn-secondary:hover {
+        background-color: #0a9396;
+        border-color: #0a9396;
+    }

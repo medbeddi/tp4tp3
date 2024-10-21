@@ -1,0 +1,60 @@
+﻿@model Atelier3.Models.Student
+
+@{
+    ViewData["Title"] = "Create a Student";
+}
+
+<div class="container mt-4">
+    <h1 class="text-center">Create a Student</h1>
+    <br />
+    <h4 class="text-info" style="color:#f34e4e !important ; text-shadow: 0 0 black;">Please complete the information below:</h4>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="StudentName" class="control-label"></label>
+                    <input asp-for="StudentName" class="form-control" placeholder="Student name" />
+                    <span asp-validation-for="StudentName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Age" class="control-label"></label>
+                    <input asp-for="Age" class="form-control" placeholder="Age of student" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BirthDate" class="control-label"></label>
+                    <input asp-for="BirthDate" class="form-control" placeholder="Date of birth" />
+                    <span asp-validation-for="BirthDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SchoolID" class="control-label"></label>
+                    <select asp-for="SchoolID" class="form-control" asp-items="ViewBag.SchoolID">
+                        <option value="">Select a school</option>
+                    </select>
+                    <span asp-validation-for="SchoolID" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mt-4">
+                    <input type="submit" value="Create" class="btn btn-primary" style="background-color:cadetblue ; border: cadetblue" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <a asp-action="Index" class="btn btn-secondary">Return to list</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

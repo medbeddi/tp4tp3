@@ -1,0 +1,45 @@
+﻿@model Atelier3.Models.Student
+
+@{
+    ViewData["Title"] = "Student Details";
+}
+
+<div class="container mt-4">
+    <h1 class="text-center">Student Details</h1>
+    <h4>Student Information</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.School)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.School.SchoolName) <!-- Affichage du nom de l'école -->
+        </dd>
+    </dl>
+
+    <div class="mt-4">
+        <a asp-action="Edit" asp-route-id="@Model?.StudentId" class="btn btn-warning">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Return to list</a>
+    </div>
+</div>
